@@ -9,6 +9,6 @@ if (NOT Boost_FOUND)
 endif ()
 include_directories(${BOOST_INCLUDE_DIRS})
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp args_parser/src/argument_parser.cpp args_parser/include/argument_parser.hpp args_parser/test/test.cpp service/include/service.hpp)
 add_executable(file_reader ${SOURCE_FILES})
 target_link_libraries(file_reader   ${Boost_LIBRARIES} )
