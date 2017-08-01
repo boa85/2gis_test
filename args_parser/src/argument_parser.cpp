@@ -29,18 +29,18 @@ namespace word_counter {
         void ArgumentParser::startParsing(int argc, char *argv[]) {
             po::variables_map vm;//
             po::parsed_options parsed =//magic
-                    po::command_line_parser(argc, argv).
-                            options(generalDescription_).
-                            allow_unregistered().run();
+                    po::command_line_parser(argc, argv).options(generalDescription_).allow_unregistered().run();
+
             po::store(parsed, vm);//more magic
             po::notify(vm);//even more magic
 
-            if (vm.count("help") != 0u) {
-                std::cout << generalDescription_;
+            if (vm.count("help") != 0u) {//if found a help flag
+                std::cout << generalDescription_;//show help
                 return;
             }
-            auto error = [this](const std::string &errorString) {
-                std::cout << errorString << ", see help"<< std::endl << generalDescription_ << std::endl;
+            auto error = [this](
+                    const std::string &errorString) {//не самое грамотное решение, но чуть чуть сокращает код
+                std::cout << errorString << ", see help " << std::endl << generalDescription_ << std::endl;
                 throw std::invalid_argument(errorString);
             };
 
@@ -54,12 +54,21 @@ namespace word_counter {
                 error(errorString);
             }
             if (!boost::filesystem::exists(fileName_)) {
-                auto errorString = "file " + fileName_ + " not found ";
-                error(errorString);
+                error("file " + fileName_ + " not found ");
             }
             if (mode == WORDS && word_.empty()) {
-                auto errorString = "empty search word";
-                error(errorString);
+                error("empty search word");
+            }
+            switch (mode) {
+                case WORDS:
+                    count(fileName_, word_);
+                    break;
+                case CHECKSUM:
+                    checksum(fileName_);
+                    break;
+                case UNKNOWN:
+                default:
+                    error("unknown mode ");
             }
             std::cout << "\nfilename = " << fileName_ << "\nmode = " << mode << "\nword = " << word_ << std::endl;
         }//startParsing

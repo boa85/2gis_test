@@ -23,6 +23,10 @@ namespace word_counter {
 
             ArgumentParser &operator=(const ArgumentParser &&other) = delete;
 
+
+            boost::signals2::signal<void(const std::string &filename, const std::string &word)> count;
+            boost::signals2::signal<void(const std::string &filename)> checksum;
+
         private:
             /**
              * @brief generalDescription_ - command line options description
@@ -49,12 +53,7 @@ namespace word_counter {
              */
             void startParsing(int argc, char *argv[]);
 
-/*
-            std::tuple getOptions(){
-                return mode == WORDS ? std::make_tuple(mode, fileName_, word_) : mode == CHECKSUM ?
-                       std::make_tuple((mode, fileName_)) : std::make_tuple("fig vam");
-            }
-*/
+
         };
     }//namespace argument_parser
 }//namespace word_counter
