@@ -5,7 +5,7 @@
 #include <boost/signals2.hpp>
 #include "../../service/include/service.hpp"
 
-namespace file_reader {
+namespace word_counter {
     namespace argument_parser {
         namespace po=boost::program_options;
         using namespace service;
@@ -57,4 +57,4 @@ namespace file_reader {
 */
         };
     }//namespace argument_parser
-}//namespace file_reader
+}//namespace word_counter

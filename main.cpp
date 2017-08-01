@@ -12,7 +12,7 @@
  * печатает информацию о программе и описание параметров.
  *
  */
-using namespace file_reader;
+using namespace word_counter;
 using namespace argument_parser;
 int main(int argc, char *argv[]) {
     try {

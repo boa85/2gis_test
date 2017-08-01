@@ -1,7 +1,7 @@
 //
 
 #pragma once
-namespace file_reader {
+namespace word_counter {
     namespace service {
         enum MODE {
             WORDS,

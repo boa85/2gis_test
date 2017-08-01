@@ -4,7 +4,7 @@
 #include <boost/filesystem.hpp>
 #include <iostream>
 
-namespace file_reader {
+namespace word_counter {
     namespace argument_parser {
         ArgumentParser::ArgumentParser()
                 : generalDescription_("program options"), mode(UNKNOWN) {
@@ -15,9 +15,9 @@ namespace file_reader {
             generalDescription_.add_options()
                     ("help,h",  "program options: \n "
                             "file name, mode, word\n"
-                            "e.g ./file_reader -f Test.tst -m words -v mother - \n prints the number of the word \"mother\" in the Test.tst file"
+                            "e.g ./word_counter -f Test.tst -m words -v mother - \n prints the number of the word \"mother\" in the Test.tst file"
                             "\n or \n "
-                            "./file_reader -f Test -m checksum - prints a 32-bit checksum\n ")
+                            "./word_counter -f Test -m checksum - prints a 32-bit checksum\n ")
                     ("file,f", po::value<std::string>(&fileName_),
                      "input filename, e.g. Test.tst")
                     ("mode,m", po::value<std::string>(&mode_),
@@ -64,4 +64,4 @@ namespace file_reader {
             std::cout << "\nfilename = " << fileName_ << "\nmode = " << mode << "\nword = " << word_ << std::endl;
         }//startParsing
     }//namespace argument_parser
-}//namespace file_reader
+}//namespace word_counter
