@@ -13,7 +13,9 @@ namespace word_counter {
 
         void ArgumentParser::initDescriptions() {
             generalDescription_.add_options()
-                    ("help,h",  "program options: \n "
+                    ("help,h", "\nsimple word counter\n"
+                            "author: boa85\n"
+                            "program options: \n "
                             "file name, mode, word\n"
                             "e.g ./word_counter -f Test.tst -m words -v mother - \n prints the number of the word \"mother\" in the Test.tst file"
                             "\n or \n "
@@ -39,31 +41,33 @@ namespace word_counter {
                 return;
             }
             auto error = [this](
-                    const std::string &errorString) {//не самое грамотное решение, но чуть чуть сокращает код
+                    const std::string &errorString) {//не самое грамотное решение, но чуть-чуть сокращает код
                 std::cout << errorString << ", see help " << std::endl << generalDescription_ << std::endl;
                 throw std::invalid_argument(errorString);
             };
 
-            po::store(po::parse_command_line(argc, argv, generalDescription_), vm);
-            mode = (mode_ == "words" ) ? WORDS : (mode_ == "checksum") ? CHECKSUM : UNKNOWN;
-            if (mode == UNKNOWN) {
+            po::store(po::parse_command_line(argc, argv, generalDescription_), vm);//parsing command line arguments
+
+            mode = (mode_ == "words") ? WORDS : (mode_ == "checksum") ? CHECKSUM : UNKNOWN;
+
+            if (mode == UNKNOWN) {//check mode
                 error("unknown mode ");
             }
-            if (fileName_.empty()) {
-                auto errorString = "invalid argument filename";
-                error(errorString);
+            if (fileName_.empty()) {//check filename length
+                error("invalid argument filename");
             }
-            if (!boost::filesystem::exists(fileName_)) {
+            if (!boost::filesystem::exists(fileName_)) {//check the existence of a file called "filename"
                 error("file " + fileName_ + " not found ");
             }
-            if (mode == WORDS && word_.empty()) {
+            if (mode == WORDS && word_.empty()) {//check search word length
                 error("empty search word");
             }
+
             switch (mode) {
-                case WORDS:
+                case WORDS://switch program mode to WORDS
                     count(fileName_, word_);
                     break;
-                case CHECKSUM:
+                case CHECKSUM://switch program mode to CHECKSUM
                     checksum(fileName_);
                     break;
                 case UNKNOWN:
