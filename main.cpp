@@ -20,8 +20,8 @@ int main(int argc, char *argv[]) {
     try {
         auto parser = std::make_shared<ArgumentParser>();
         auto commandHandler = std::make_shared<CommandHandler>();
-        parser->count.connect(boost::bind(&CommandHandler::countWords, commandHandler, _1, _2));
-        parser->checksum.connect(boost::bind(&CommandHandler::calculateChecksum, commandHandler, _1));
+        parser->count.connect(boost::bind(&CommandHandler::runCountWordsMode, commandHandler, _1, _2));
+        parser->checksum.connect(boost::bind(&CommandHandler::runCalculateChecksumMode, commandHandler, _1));
         parser->startParsing(argc, argv);
     }
     catch (std::exception &e) {

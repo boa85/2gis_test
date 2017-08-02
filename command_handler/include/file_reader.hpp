@@ -5,28 +5,28 @@
 #ifndef WORD_COUNTER_FILE_READER_HPP
 #define WORD_COUNTER_FILE_READER_HPP
 
-#include <functional>
 #include "../../service/include/service.hpp"
+#include <boost/signals2.hpp>
 
 namespace word_counter {
     using namespace service;
     namespace file_reader {
         class FileReader {
-
         public:
             FileReader();
 
-            virtual ~FileReader() = default;
+            void read(const std::string &filename);
 
-            bool read(const std::string &filename);
-
+            boost::signals2::signal<void(const Text &)> getText;
         private:
-            Text text_;
             const unsigned LINE_COUNT = 1000;
-        };//class FileReader
-    }//namespace file_reader
-}//namespace word_counter
+            const unsigned LENGTH = 255;
+            Text text_;
 
+            void init();
+        };
 
+    }
+}
 
 #endif //WORD_COUNTER_FILE_READER_HPP
