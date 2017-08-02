@@ -1,6 +1,8 @@
 //
 
-#pragma once
+#ifndef WORD_COUNTER_ARGUMENT_PARSER_HPP
+#define WORD_COUNTER_ARGUMENT_PARSER_HPP
+
 #include <boost/program_options.hpp>
 #include <boost/signals2.hpp>
 #include "../../service/include/service.hpp"
@@ -83,3 +85,4 @@ namespace word_counter {
         };
     }//namespace argument_parser
 }//namespace word_counter
+#endif//WORD_COUNTER_ARGUMENT_PARSER_HPP
