@@ -16,7 +16,7 @@ namespace word_counter {
                     ("help,h", "\nsimple word counter\n"
                             "author: boa85\n"
                             "program options: \n "
-                            "file name, mode, word\n"
+                            "file name, program mode, search word\n"
                             "e.g ./word_counter -f Test.tst -m words -v mother - \n prints the number of the word \"mother\" in the Test.tst file"
                             "\n or \n "
                             "./word_counter -f Test -m checksum - prints a 32-bit checksum\n ")
