@@ -15,7 +15,6 @@ namespace word_counter {
             searchWord_ = std::move(searchWord);
             fileReader_->getText.connect(boost::bind(&CommandHandler::countWords, this, _1));
             fileReader_->read(filename);
-            std::cout << "filename = " << filename << " searchWord = " << searchWord_ << std::endl;
         }
 
         void CommandHandler::runCalculateChecksumMode(const std::string &filename) {
