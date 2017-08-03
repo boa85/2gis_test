@@ -1,13 +1,12 @@
 //
 
 #include "../include/argument_parser.hpp"
-#include <boost/filesystem.hpp>
-#include <iostream>
 
+using namespace boost::system;
 namespace word_counter {
     namespace argument_parser {
         ArgumentParser::ArgumentParser()
-                : generalDescription_("program options"), mode(UNKNOWN) {
+                : generalDescription_("program options") {
             initDescriptions();
         }
 
@@ -16,16 +15,20 @@ namespace word_counter {
                     ("help,h", "\nsimple word counter\n"
                             "author: boa85\n"
                             "program options: \n "
-                            "file name, mode, word\n"
+                            "mode, filename, word\n"
                             "e.g ./word_counter -f Test.tst -m words -v mother - \n prints the number of the word \"mother\" in the Test.tst file"
                             "\n or \n "
-                            "./word_counter -f Test -m checksum - prints a 32-bit checksum\n ")
-                    ("file,f", po::value<std::string>(&fileName_),
+                            "./word_counter -f Test.tst -m checksum - prints a 32-bit checksum\n ")
+                    ("mode,m", po::value<std::string>(&mode_)->required(),
+                     "program mode: words, checksum");
+            wordCountDescription_.add_options()
+                    ("file,f", po::value<std::string>(),
                      "input filename, e.g. Test.tst")
-                    ("mode,m", po::value<std::string>(&mode_),
-                     "program mode: words, checksum")
-                    ("v,vv", po::value<std::string>(&word_),
+                    ("word,w", po::value<std::string>(),
                      " search word");
+            checksumDescription_.add_options()
+                    ("file,f", po::value<std::string>(),
+                     "input filename, e.g. Test.tst");
         }
 
         void ArgumentParser::startParsing(int argc, char *argv[]) {
@@ -40,41 +43,71 @@ namespace word_counter {
                 std::cout << generalDescription_;//show help
                 return;
             }
-            auto error = [this](
-                    const std::string &errorString) {//не самое грамотное решение, но чуть-чуть сокращает код
-                std::cout << errorString << ", see help " << std::endl << generalDescription_ << std::endl;
-                throw std::invalid_argument(errorString);
-            };
-
-            po::store(po::parse_command_line(argc, argv, generalDescription_), vm);//parsing command line arguments
-
-            mode = (mode_ == "words") ? WORDS : (mode_ == "checksum") ? CHECKSUM : UNKNOWN;
-
-            if (mode == UNKNOWN) {//check mode
-                error("unknown mode ");
-            }
-            if (fileName_.empty()) {//check filename length
-                error("invalid argument filename");
-            }
-            if (!boost::filesystem::exists(fileName_)) {//check the existence of a file called "filename"
-                error("file " + fileName_ + " not found ");
-            }
-            if (mode == WORDS && word_.empty()) {//check search word length
-                error("empty search word");
+            if (mode_ == "word") {//check program mode
+                generalDescription_.add(wordCountDescription_);//add WORD_COUNT mode options descriptions
+                po::store(po::parse_command_line(argc, argv, generalDescription_), vm);//parse options
+                prepareWordCountMode(vm);
+            } else if (mode_ == "checksum") {
+                generalDescription_.add(checksumDescription_);
+                po::store(po::parse_command_line(argc, argv, generalDescription_), vm);
+                prepareChecksumMode(vm);
+            } else {
+                error("unknown program mode");
             }
 
-            switch (mode) {
-                case WORDS://switch program mode to WORDS
-                    count(fileName_, word_);
-                    break;
-                case CHECKSUM://switch program mode to CHECKSUM
-                    checksum(fileName_);
-                    break;
-                case UNKNOWN:
-                default:
-                    error("unknown mode ");
+        }
+
+        void ArgumentParser::prepareWordCountMode(const po::variables_map &vm) {
+            std::string filename;
+            std::string word;
+            const auto fKey = "file";
+            const auto wKey = "word";
+            if (vm.count(fKey) != 0u) {
+                filename = vm[fKey].as<std::string>();
+                if (filename.empty()) {
+                    error("empty value of the filename argument");
+                }
+            } else {
+                error("the option \"filename\" is required but missing");
             }
-            std::cout << "\nfilename = " << fileName_ << "\nmode = " << mode << "\nword = " << word_ << std::endl;
-        }//startParsing
+            if (vm.count(wKey) != 0u) {
+                word = vm[wKey].as<std::string>();
+                if (word.empty()) {
+                    error("empty value of the search word argument");
+                }
+            } else {
+                error("the option \"search word \" is required but missing");
+            }
+            boost::system::error_code errorCode;
+            if (isValidFile(filename, errorCode)) {
+                count(filename, word);
+            } else {
+                error("invalid value " + filename + " " + errorCode.message());
+            }
+        }
+
+        void ArgumentParser::prepareChecksumMode(const po::variables_map &vm) {
+            std::string filename;
+            const auto key = "file";
+            if (vm.count(key) != 0u) {
+                filename = vm[key].as<std::string>();
+                if (filename.empty()) {
+                    error("empty value of the filename argument");
+                }
+            }
+            boost::system::error_code errorCode;
+            if (isValidFile(filename, errorCode)) {
+                checksum(filename);
+            }
+        }
+
+        void ArgumentParser::error(const std::string &errorMessage) {
+            std::cout << errorMessage << std::endl << "See help " << std::endl << generalDescription_ << std::endl;
+            throw std::invalid_argument(errorMessage);
+        }
+
+        bool ArgumentParser::isValidFile(const std::string &filename, boost::system::error_code &errorCode) {
+            return (fs::exists(filename, errorCode) && fs::is_regular(filename, errorCode));
+        }
     }//namespace argument_parser
 }//namespace word_counter

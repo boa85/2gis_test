@@ -3,12 +3,17 @@
 #pragma once
 #include <boost/program_options.hpp>
 #include <boost/signals2.hpp>
+#include <boost/filesystem.hpp>
+#include <iostream>
+
 #include "../../service/include/service.hpp"
 
+
 namespace word_counter {
+    using namespace service;
+    namespace po=boost::program_options;
+    namespace fs=boost::filesystem;
     namespace argument_parser {
-        namespace po=boost::program_options;
-        using namespace service;
 
         /**
          * @class ArgumentParser
@@ -49,28 +54,36 @@ namespace word_counter {
              * @brief generalDescription_ - command line options description
              */
             po::options_description generalDescription_;
+
             /**
-             * @brief filename_ - input filename
+             * @brief wordCountDescription_ - word count mode description
              */
-            std::string fileName_;
+            po::options_description wordCountDescription_;
+
+/**
+             * @brief checksumDescription_ - checksum mode description
+             */
+            po::options_description checksumDescription_;
+
             /**
              * @brief mode_ - string program mode: WORDS, CHECKSUM
              */
             std::string mode_;
-            /**
-             * @brief word_ search word
-             */
-            std::string word_;
-            /**
-             * @brief -
-             */
-            MODE mode;
 
+            std::string filename_;
+            std::string searchWord_;
             /**
              * @brief initDescriptions - init boost program options descriptions
              */
             void initDescriptions();
 
+            void prepareWordCountMode(const po::variables_map &vm);
+
+            void prepareChecksumMode(const po::variables_map &vm);
+
+            void error(const std::string &errorMessage);
+
+            bool isValidFile(const std::string &filename, boost::system::error_code &errorCode);
         public:
             /**
              * @brief startParsing start command line arguments parser
