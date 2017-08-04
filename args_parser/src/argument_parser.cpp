@@ -1,6 +1,7 @@
 //
 
 #include "../include/argument_parser.hpp"
+#include "../include/args_parse_exception.hpp"
 
 using namespace boost::system;
 namespace word_counter {
@@ -111,7 +112,7 @@ namespace word_counter {
 
         void ArgumentParser::error(const std::string &errorMessage) {
             std::cout << errorMessage << std::endl << "See help " << std::endl << generalDescription_ << std::endl;
-            throw std::invalid_argument(errorMessage);
+            throw ArgsParseException(errorMessage);
         }
 
         bool ArgumentParser::isValidFile(const std::string &filename, boost::system::error_code &errorCode) {

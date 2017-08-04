@@ -17,6 +17,6 @@ set(SOURCE_FILES main.cpp
         command_handler/src/command_handler.cpp
         command_handler/include/command_handler.hpp
         command_handler/src/file_reader.cpp
-        command_handler/include/file_reader.hpp)
+        command_handler/include/file_reader.hpp args_parser/src/args_parse_exception.cpp args_parser/include/args_parse_exception.hpp)
 add_executable(word_counter ${SOURCE_FILES})
 target_link_libraries(word_counter   ${Boost_LIBRARIES} )
