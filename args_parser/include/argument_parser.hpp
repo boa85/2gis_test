@@ -23,7 +23,7 @@ namespace word_counter {
         class ArgumentParser {
         public:
             /**
-             * @brief ArgumentParser
+             * @brief ArgumentParser - default constructor, init generalDescription_
              */
             ArgumentParser();
             /**
@@ -68,13 +68,13 @@ namespace word_counter {
 
             /**
              * @brief prepareWordCountMode -  checks the correctness of the mode parameters and sent command to run mode
-             * @param vm
+             * @param vm - boost::program_options variable map with program arguments
              */
             void prepareWordCountMode(const po::variables_map &vm);
 
             /**
              * @brief prepareChecksumMode - checks the correctness of the mode parameters and sent command to run mode
-             * @param vm
+             * @param vm - boost::program_options variable map with program arguments
              */
             void prepareChecksumMode(const po::variables_map &vm);
 
