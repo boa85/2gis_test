@@ -12,7 +12,7 @@ namespace word_counter {
     namespace command_handler {
         class CommandHandler {
         public:
-            explicit CommandHandler();
+            explicit CommandHandler() = default;
 
 
         };//class CommandHandler
