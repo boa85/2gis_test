@@ -8,12 +8,7 @@
 #include <string>
 namespace word_counter {
     namespace service {
-        typedef std::vector<std::string> Text;
-        enum MODE {
-            WORDS,
-            CHECKSUM,
-            UNKNOWN
-        };
+  
     }
 }
 #endif//WORD_COUNTER_SERVICE_HPP
