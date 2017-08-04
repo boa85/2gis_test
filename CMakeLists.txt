@@ -16,7 +16,6 @@ set(SOURCE_FILES main.cpp
         service/include/service.hpp
         command_handler/src/command_handler.cpp
         command_handler/include/command_handler.hpp
-        command_handler/src/file_reader.cpp
-        command_handler/include/file_reader.hpp)
+        )
 add_executable(word_counter ${SOURCE_FILES})
 target_link_libraries(word_counter   ${Boost_LIBRARIES} )
