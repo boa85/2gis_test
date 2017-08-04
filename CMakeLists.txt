@@ -12,6 +12,8 @@ include_directories(${BOOST_INCLUDE_DIRS})
 set(SOURCE_FILES main.cpp
         args_parser/src/argument_parser.cpp
         args_parser/include/argument_parser.hpp
+        args_parser/include/args_parse_exception.hpp
+        args_parser/src/args_parse_exception.cpp
         args_parser/test/test.cpp
         service/include/service.hpp
         command_handler/src/command_handler.cpp
