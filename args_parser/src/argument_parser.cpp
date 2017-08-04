@@ -17,7 +17,8 @@ namespace word_counter {
                             "author: boa85\n"
                             "program options: \n "
                             "mode, filename, word\n"
-                            "e.g ./word_counter -f Test.tst -m words -v mother - \n prints the number of the word \"mother\" in the Test.tst file"
+                            "e.g ./word_counter -f Test.tst -m words -w mother - "
+                            "\n prints the number of the word \"mother\" in the Test.tst file"
                             "\n or \n "
                             "./word_counter -f Test.tst -m checksum - prints a 32-bit checksum\n ")
                     ("mode,m", po::value<std::string>(&mode_)->required(),
