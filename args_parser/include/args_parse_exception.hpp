@@ -10,10 +10,21 @@
 
 namespace word_counter {
     namespace argument_parser {
+        /**
+         * @class ArgsParseException - my exception
+         */
         class ArgsParseException : public std::exception {
         public:
-            explicit ArgsParseException(const std::string &message)throw();
+            /**
+             * @brief ArgsParseException  - constructor
+             * @param message - error message
+             */
+            explicit ArgsParseException(const std::string &message) throw();
 
+            /**
+             * @brief what - override method
+             * @return copy of error message
+             */
             const char *what() const throw() override;
 
         private:
