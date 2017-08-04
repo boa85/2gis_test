@@ -54,7 +54,6 @@ namespace word_counter {
             } else {
                 error("unknown program mode");
             }
-
         }
 
         void ArgumentParser::prepareWordCountMode(const po::variables_map &vm) {
