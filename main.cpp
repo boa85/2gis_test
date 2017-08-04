@@ -1,6 +1,7 @@
 #include <iostream>
 #include "args_parser/include/argument_parser.hpp"
 #include "command_handler/include/command_handler.hpp"
+#include "args_parser/include/args_parse_exception.hpp"
 /**
  * Напишите (консольную) программу, принимающую на вход  имя файла и набор параметров.
  * В зависимости от параметров программа должна работать в трёх режимах:
@@ -22,10 +23,8 @@ int main(int argc, char *argv[]) {
         auto commandHandler = std::make_shared<CommandHandler>();
         parser->startParsing(argc, argv);
     }
-    catch (std::exception &e) {
-        std::cerr << e.what() << std::endl;
+    catch (ArgsParseException &e) {
+        std::cout << e.what() << std::endl;
     }
-
-
     return 0;
 }
