@@ -13,6 +13,6 @@ namespace word_counter {
         ChecksumCommand::ChecksumCommand(const std::string &filename) {
 
         }
-    }
-}
+    }//namespace command_handler
+}//namespace word_counter
 

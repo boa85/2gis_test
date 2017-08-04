@@ -16,10 +16,10 @@ namespace word_counter {
             WordCountCommand(const std::string &filename, const std::string &searchWord);
 
             void execute() override;
-        };
+        };// class WordCountCommand
 
-    }
-}
+    }//namespace command_handler
+}//namespace word_counter
 
 
 #endif //WORD_COUNTER_WORD_COUNT_COMMAND_HPP

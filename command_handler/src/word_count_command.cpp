@@ -13,6 +13,6 @@ namespace word_counter {
         WordCountCommand::WordCountCommand(const std::string &filename, const std::string &searchWord) {
 
         }
-    }
-}
+    }//namespace command_handler
+}//namespace word_counter
 

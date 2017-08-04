@@ -14,10 +14,9 @@ namespace word_counter {
 
         protected:
             virtual void execute() = 0;
-        };
-
-    }
-}
+        };//class ICommand
+    }//namespace command_handler
+}//namespace word_counter
 
 
 #endif //WORD_COUNTER_ICOMMAND_HPP
