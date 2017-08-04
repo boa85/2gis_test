@@ -23,21 +23,9 @@ namespace word_counter {
         class ArgumentParser {
         public:
             /**
-             * @brief ArgumentParser
+             * @brief ArgumentParser - default constructor, init generalDescription_
              */
             ArgumentParser();
-
-            virtual ~ArgumentParser() = default;
-
-            //copies and assigned constructors and operators has been forbidden
-            ArgumentParser(const ArgumentParser &orig) = delete;
-
-            ArgumentParser(const ArgumentParser &&orig) = delete;
-
-            ArgumentParser &operator=(const ArgumentParser &other) = delete;
-
-            ArgumentParser &operator=(const ArgumentParser &&other) = delete;
-
             /**
              * @brief count - program switching signal to word count mode
              * @param filename - input file
@@ -62,7 +50,7 @@ namespace word_counter {
              */
             po::options_description wordCountDescription_;
 
-/**
+            /**
              * @brief checksumDescription_ - checksum mode description
              */
             po::options_description checksumDescription_;
@@ -72,29 +60,44 @@ namespace word_counter {
              */
             std::string mode_;
 
-            std::string filename_;
-            std::string searchWord_;
+
             /**
              * @brief initDescriptions - init boost program options descriptions
              */
             void initDescriptions();
 
+            /**
+             * @brief prepareWordCountMode -  checks the correctness of the mode parameters and sent command to run mode
+             * @param vm - boost::program_options variable map with program arguments
+             */
             void prepareWordCountMode(const po::variables_map &vm);
 
+            /**
+             * @brief prepareChecksumMode - checks the correctness of the mode parameters and sent command to run mode
+             * @param vm - boost::program_options variable map with program arguments
+             */
             void prepareChecksumMode(const po::variables_map &vm);
 
+            /**
+             * @brief error - error handler method
+             * @param errorMessage - message about error
+             */
             void error(const std::string &errorMessage);
 
+            /**
+             * @brief isValidFile - checks the existence of the file and its status
+             * @param filename - filename
+             * @param errorCode - boost::system::error_code, return system error message
+             * @return true, if a file exists and it is a regular file
+             */
             bool isValidFile(const std::string &filename, boost::system::error_code &errorCode);
         public:
             /**
              * @brief startParsing start command line arguments parser
              * @param argc count of arguments
-             * @param argv  - arguments
+             * @param argv  - values of arguments
              */
             void startParsing(int argc, char *argv[]);
-
-
         };
     }//namespace argument_parser
 }//namespace word_counter
