@@ -86,7 +86,7 @@ namespace word_counter {
             }
             boost::system::error_code errorCode;
             if (isValidFile(filename, errorCode)) {//if a file exists and it is a regular file
-                count(filename, word);//sent command to run program in WORD_COUNT mode
+                countOccurrencesWord(filename, word);//sent command to run program in WORD_COUNT mode
             } else {
                 error("invalid value " + filename + " " + errorCode.message());
             }
@@ -105,7 +105,7 @@ namespace word_counter {
             }
             boost::system::error_code errorCode;
             if (isValidFile(filename, errorCode)) {//if a file exists and it is a regular file
-                checksum(filename);
+                calculateChecksum(filename);
             } else {
                 error("invalid value " + filename + " " + errorCode.message());
             }

@@ -31,13 +31,13 @@ namespace word_counter {
              * @param filename - input file
              * @param word - search word
              */
-            boost::signals2::signal<void(const std::string &filename, const std::string &word)> count;
+            boost::signals2::signal<void(std::string &filename, std::string &word)> countOccurrencesWord;
 
             /**
              * @brief checksum - the program switching signal to the Checksum calculation mode
              * @param filename - input file
              */
-            boost::signals2::signal<void(const std::string &filename)> checksum;
+            boost::signals2::signal<void(std::string &filename)> calculateChecksum;
 
         private:
             /**
