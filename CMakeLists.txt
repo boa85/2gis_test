@@ -22,6 +22,7 @@ set(SOURCE_FILES main.cpp
         command_handler/include/count_occurrences_word_command.hpp
         command_handler/src/checksum_command.cpp
         command_handler/include/checksum_command.hpp
-        command_handler/src/invoker.cpp command_handler/include/invoker.hpp)
+        command_handler/src/invoker.cpp
+        command_handler/include/invoker.hpp)
 add_executable(word_counter ${SOURCE_FILES})
 target_link_libraries(word_counter   ${Boost_LIBRARIES} )
