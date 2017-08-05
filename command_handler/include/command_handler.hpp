@@ -7,13 +7,16 @@
 
 #include <string>
 #include <functional>
+#include <memory>
+#include "icommand.hpp"
 
 namespace word_counter {
     namespace command_handler {
         class CommandHandler {
         public:
-            explicit CommandHandler() = default;
+            CommandHandler() = default;
 
+            void start(std::shared_ptr<ICommand> command);
 
         };//class CommandHandler
 
