@@ -3,7 +3,7 @@
 //
 
 #include "../include/invoker.hpp"
-#include "../include/word_count_command.hpp"
+#include "../include/count_occurrences_word_command.hpp"
 #include "../include/checksum_command.hpp"
 
 namespace word_counter {
