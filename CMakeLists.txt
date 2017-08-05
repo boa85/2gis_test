@@ -14,10 +14,14 @@ set(SOURCE_FILES main.cpp
         args_parser/include/argument_parser.hpp
         args_parser/include/args_parse_exception.hpp
         args_parser/src/args_parse_exception.cpp
-        args_parser/test/test.cpp
         service/include/service.hpp
         command_handler/src/command_handler.cpp
         command_handler/include/command_handler.hpp
-        command_handler/include/icommand.hpp command_handler/src/word_count_command.cpp command_handler/include/word_count_command.hpp command_handler/src/checksum_command.cpp command_handler/include/checksum_command.hpp)
+        command_handler/include/icommand.hpp
+        command_handler/src/count_occurrences_word_command.cpp
+        command_handler/include/count_occurrences_word_command.hpp
+        command_handler/src/checksum_command.cpp
+        command_handler/include/checksum_command.hpp
+        command_handler/src/invoker.cpp command_handler/include/invoker.hpp)
 add_executable(word_counter ${SOURCE_FILES})
 target_link_libraries(word_counter   ${Boost_LIBRARIES} )
