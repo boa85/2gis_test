@@ -14,7 +14,6 @@ namespace word_counter {
 
             virtual ~ICommand() = default;
 
-        protected:
             virtual void execute() = 0;
         };//class ICommand
     }//namespace command_handler
