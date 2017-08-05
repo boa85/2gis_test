@@ -4,16 +4,20 @@
 
 #include <cstring>
 #include <memory>
+#include <utility>
 #include "../include/args_parse_exception.hpp"
 
 namespace word_counter {
     namespace argument_parser {
-        ArgsParseException::ArgsParseException(const std::string &message)  throw()
-                : errorMessage_(message) {}
+        ArgsParseException::ArgsParseException(const std::string &message)
+                : std::logic_error(message) {}
 
         const char *ArgsParseException::what() const throw() {
-            return strcpy(new char[errorMessage_.size()], errorMessage_.c_str());//FIXME memory leak
+            return std::logic_error::what();
         }
+
+        ArgsParseException::ArgsParseException(const char *message)
+                : std::logic_error(message) {}
     }
 }
 

@@ -24,8 +24,7 @@ int main(int argc, char *argv[]) {
         parser->startParsing(argc, argv);
     }
     catch (ArgsParseException &e) {
-        std::cout << e.what() << std::endl;
-        delete e.what();
+        std::cerr << e.what() << std::endl;
     }
     return 0;
 }

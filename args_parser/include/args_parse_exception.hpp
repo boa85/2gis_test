@@ -13,24 +13,36 @@ namespace word_counter {
         /**
          * @class ArgsParseException - my exception
          */
-        class ArgsParseException : public std::exception {
+        class ArgsParseException : public std::logic_error {
         public:
             /**
              * @brief ArgsParseException  - constructor
              * @param message - error message
              */
-            explicit ArgsParseException(const std::string &message) throw();
+            explicit ArgsParseException(const std::string &message);
+
+            /**
+             * @brief ArgsParseException - constructor
+             * @param message
+             */
+            explicit ArgsParseException(const char *message);
+
+            /**
+             * @brief ArgsParseException - copy constructor
+             */
+            ArgsParseException(const ArgsParseException &) = default;
+
+            ArgsParseException &operator=(const ArgsParseException &) = default;
+
+            ~ArgsParseException() override = default;
 
             /**
              * @brief what - override method
-             * @return copy of error message
+             * @return Returns a C-style character string describing the general cause of
+             * the current error (the same string passed to the ctor).
              */
             const char *what() const throw() override;
-
-        private:
-            const std::string errorMessage_;
         };
-
     }
 }
 
