@@ -13,7 +13,7 @@ namespace word_counter {
             ICommand() = default;
 
             virtual ~ICommand() = default;
-            
+
         protected:
             virtual void execute() = 0;
         };//class ICommand

@@ -25,6 +25,7 @@ int main(int argc, char *argv[]) {
     }
     catch (ArgsParseException &e) {
         std::cout << e.what() << std::endl;
+        delete e.what();
     }
     return 0;
 }
