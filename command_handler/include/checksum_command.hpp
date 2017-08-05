@@ -13,9 +13,15 @@ namespace word_counter {
     namespace command_handler {
         class ChecksumCommand : public ICommand {
         public:
-            explicit ChecksumCommand(const std::string &filename);
+            explicit ChecksumCommand(std::string &filename);
 
             void execute() override;
+
+            ~ChecksumCommand() override = default;
+
+        private:
+            std::string filename_;
+
         };//class ChecksumCommand
     }//namespace command_handler
 }//namespace word_counter
