@@ -11,16 +11,61 @@
 
 namespace word_counter {
     namespace command_handler {
+        /**
+         * @class CountOccurrencesWordCommand - implements ICommand interface
+         */
         class CountOccurrencesWordCommand : public ICommand {
         public:
+            /**
+             * @brief CountOccurrencesWordCommand - constructor
+             * @param filename - input file
+             * @param searchWord - search word
+             */
             CountOccurrencesWordCommand(std::string &filename, std::string &searchWord);
 
+            /**
+             * @brief ~CountOccurrencesWordCommand - destructor
+             */
             ~CountOccurrencesWordCommand() override = default;
 
+            /**
+             * @brief CountOccurrencesWordCommand -  copy constructor
+             */
+            CountOccurrencesWordCommand(const CountOccurrencesWordCommand &) = default;
+
+            /**
+             * @brief  CountOccurrencesWordCommand - move constructor
+             */
+            CountOccurrencesWordCommand(CountOccurrencesWordCommand &&) = default;
+
+            /**
+             * @brief operator= copy assignment operator
+             */
+            CountOccurrencesWordCommand &operator=(const CountOccurrencesWordCommand &) = default;
+
+            /**
+              * @brief operator= move assignment operator
+              */
+            CountOccurrencesWordCommand &operator=(CountOccurrencesWordCommand &&) = default;
+            /**
+             * @brief start - run command execution of the command
+             * @param command - command to be executed
+             */
+
+            /**
+             * @brief execute - override method ICommand interface,
+             * count number of occurrences word in file filename_
+             */
             void execute() override;
 
         private:
+            /**
+             * @brief filename_ - input file
+             */
             std::string filename_;
+            /**
+             * @brief searchWord_ - Word, the number of occurrences of which will be calculated
+             */
             std::string searchWord_;
 
         };// class CountOccurrencesWordCommand

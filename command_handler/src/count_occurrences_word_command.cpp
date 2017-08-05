@@ -12,10 +12,12 @@ namespace word_counter {
         CountOccurrencesWordCommand::CountOccurrencesWordCommand(std::string &filename,
                                                                  std::string &searchWord)
                 : filename_(std::move(filename)),
-                  searchWord_(std::move(searchWord)) {}
+                  searchWord_(std::move(searchWord)) {
+            std::cout << "CountOccurrencesWordCommand, fn = " << filename_ << " sw = " << searchWord_ << std::endl;
+        }
 
         void CountOccurrencesWordCommand::execute() {
-
+            std::cout << "CountOccurrencesWordCommand::execute()" << std::endl;
         }
 
 
