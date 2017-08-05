@@ -11,12 +11,19 @@
 
 namespace word_counter {
     namespace command_handler {
-        class WordCountCommand : public ICommand {
+        class CountOccurrencesWordCommand : public ICommand {
         public:
-            WordCountCommand(const std::string &filename, const std::string &searchWord);
+            CountOccurrencesWordCommand(std::string &filename, std::string &searchWord);
+
+            ~CountOccurrencesWordCommand() override = default;
 
             void execute() override;
-        };// class WordCountCommand
+
+        private:
+            std::string filename_;
+            std::string searchWord_;
+
+        };// class CountOccurrencesWordCommand
 
     }//namespace command_handler
 }//namespace word_counter
