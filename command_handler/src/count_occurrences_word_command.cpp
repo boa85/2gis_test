@@ -9,7 +9,8 @@
 namespace word_counter {
     namespace command_handler {
 
-        CountOccurrencesWordCommand::CountOccurrencesWordCommand(std::string &filename, std::string &searchWord)
+        CountOccurrencesWordCommand::CountOccurrencesWordCommand(std::string &filename,
+                                                                 std::string &searchWord)
                 : filename_(std::move(filename)),
                   searchWord_(std::move(searchWord)) {}
 

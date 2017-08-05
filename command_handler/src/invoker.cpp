@@ -17,7 +17,7 @@ namespace word_counter {
             return std::make_shared<ChecksumCommand>(filename);
         }
 
-        void Invoker::countNumberOccurrencesWord(std::string &filename, std::string &searchWord) {
+        void Invoker::countOccurrencesWord(std::string &filename, std::string &searchWord) {
             auto command = createCountOccurrencesWordCommand(filename, searchWord);
             start(command);
         }

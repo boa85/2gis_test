@@ -19,7 +19,7 @@ namespace word_counter {
 
             virtual  ~Invoker() = default;
 
-            void countNumberOccurrencesWord(std::string &filename, std::string &searchWord);
+            void countOccurrencesWord(std::string &filename, std::string &searchWord);
 
             void calculateCheckSum(std::string &filename);
 
