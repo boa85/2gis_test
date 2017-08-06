@@ -71,8 +71,6 @@ namespace word_counter {
             /**
              * @brief prefixFunction - Classical implementation of the Knuth-Morris-Pratt algorithm
              * computing prefix functions
-             * @param s
-             * @return
              */
             std::vector<int> prefixFunction(const std::string &s);
         };// class CountOccurrencesWordCommand
