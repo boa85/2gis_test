@@ -8,8 +8,9 @@
 #include <string>
 #include <boost/filesystem.hpp>
 namespace word_counter {
-    namespace fs=boost::filesystem;
+
     namespace service {
+        namespace fs=boost::filesystem;
         /**
          * @brief isValidFile - checks the existence of the file and its status
          * @param filename - filename

@@ -8,9 +8,11 @@
 #include <string>
 #include <functional>
 #include <memory>
+
 #include "icommand.hpp"
 
 namespace word_counter {
+
     namespace command_handler {
         /**
          * @class CommandHandler  - in classical description (GoF) Receiver, executes commands
@@ -56,6 +58,7 @@ namespace word_counter {
         };//class CommandHandler
 
     }//namespace command_handler
+
 }//namespace word_counter
 
 

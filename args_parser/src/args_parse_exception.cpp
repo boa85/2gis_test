@@ -4,7 +4,7 @@
 
 #include <cstring>
 #include <memory>
-#include <utility>
+
 #include "../include/args_parse_exception.hpp"
 
 namespace word_counter {

@@ -7,6 +7,7 @@
 #include "../include/checksum_command.hpp"
 
 namespace word_counter {
+
     namespace command_handler {
         std::shared_ptr<ICommand> Invoker::createCountOccurrencesWordCommand(std::string &filename,
                                                                              std::string &searchWord) {

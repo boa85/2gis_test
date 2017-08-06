@@ -6,7 +6,6 @@
 #define WORD_COUNTER_INVOKER_HPP
 
 #include <memory>
-
 #include <boost/signals2.hpp>
 
 #include "icommand.hpp"

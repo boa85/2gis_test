@@ -7,6 +7,7 @@
 
 #include <string>
 #include <vector>
+
 #include "icommand.hpp"
 
 namespace word_counter {
