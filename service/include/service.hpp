@@ -20,6 +20,6 @@ namespace word_counter {
         bool isValidFile(const std::string &filename, boost::system::error_code &errorCode) {
             return (fs::exists(filename, errorCode) && fs::is_regular(filename, errorCode));
         }
-    }
-}
+    }//namespace service
+}//namespace word_counter
 #endif//WORD_COUNTER_SERVICE_HPP
