@@ -31,12 +31,16 @@ test -h
 * Клонирование из репозитория в локальный каталог
 git clone https://github.com/boa85/2gis_test.git
 * Переход в каталог с исходным кодом
+
 cd ${project_source_dir}
 * Создание дирректории для работы cmake и переход в неё
+
 mkdir cmake-build-debug && cd ./cmake-build-debug/
 * Запуск cmake для генерации Makefile
+
 cmake ..
 * Сборка проекта 
+
 make
 
 ###  Запуск
