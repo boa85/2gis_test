@@ -14,7 +14,6 @@
 namespace word_counter {
     using namespace service;
     namespace po=boost::program_options;
-    namespace fs=boost::filesystem;
     namespace argument_parser {
 
         /**
@@ -84,13 +83,6 @@ namespace word_counter {
              */
             void error(const std::string &errorMessage);
 
-            /**
-             * @brief isValidFile - checks the existence of the file and its status
-             * @param filename - filename
-             * @param errorCode - boost::system::error_code, return system error message
-             * @return true, if a file exists and it is a regular file
-             */
-            bool isValidFile(const std::string &filename, boost::system::error_code &errorCode);
         public:
             /**
              * @brief startParsing start command line arguments parser

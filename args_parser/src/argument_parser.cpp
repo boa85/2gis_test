@@ -116,8 +116,5 @@ namespace word_counter {
             throw ArgsParseException(errorMessage);
         }
 
-        bool ArgumentParser::isValidFile(const std::string &filename, boost::system::error_code &errorCode) {
-            return (fs::exists(filename, errorCode) && fs::is_regular(filename, errorCode));
-        }
     }//namespace argument_parser
 }//namespace word_counter
