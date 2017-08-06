@@ -60,6 +60,7 @@ namespace word_counter {
              */
             std::string filename_;
 
+            uint32_t checksum();
         };//class ChecksumCommand
     }//namespace command_handler
 }//namespace word_counter

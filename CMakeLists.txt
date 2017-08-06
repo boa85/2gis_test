@@ -15,6 +15,7 @@ set(SOURCE_FILES main.cpp
         args_parser/include/args_parse_exception.hpp
         args_parser/src/args_parse_exception.cpp
         service/include/service.hpp
+        service/src/service.cpp
         command_handler/src/command_handler.cpp
         command_handler/include/command_handler.hpp
         command_handler/include/icommand.hpp
