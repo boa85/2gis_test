@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(word_counter)
+project(2gis_test)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "-O0 -pedantic-errors -Wextra -Wall -Winit-self -Wold-style-cast -Woverloaded-virtual -Wuninitialized -Wmissing-declarations -Wno-ignored-qualifiers -Wno-unused-parameter")
@@ -25,5 +25,5 @@ set(SOURCE_FILES main.cpp
         command_handler/include/checksum_command.hpp
         command_handler/src/invoker.cpp
         command_handler/include/invoker.hpp)
-add_executable(word_counter ${SOURCE_FILES})
-target_link_libraries(word_counter   ${Boost_LIBRARIES} )
+add_executable(2gis_test ${SOURCE_FILES})
+target_link_libraries(2gis_test ${Boost_LIBRARIES})
