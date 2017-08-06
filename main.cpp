@@ -31,5 +31,8 @@ int main(int argc, char *argv[]) {
     catch (ArgsParseException &e) {
         std::cerr << e.what() << std::endl;
     }
+    catch (std::exception &exception) {
+        std::cerr << exception.what() << std::endl;
+    }
     return 0;
 }
