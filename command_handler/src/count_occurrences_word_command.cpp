@@ -23,10 +23,10 @@ namespace word_counter {
         void CountOccurrencesWordCommand::execute() {
             boost::system::error_code errorCode;
             if (isValidFile(filename_, errorCode)) {
-                std::string line;
                 std::ifstream input(filename_);
                 if (input.is_open()) {
                     auto counter = 0;
+                    std::string line;
                     while (getline(input, line)) {
                         std::vector<int> pi = prefixFunction(searchWord_ + '#' + line);
                         auto length = searchWord_.length();
@@ -43,7 +43,7 @@ namespace word_counter {
                 throw std::runtime_error("cannot open file " + filename_);
             }
             throw std::runtime_error(errorCode.message());
-        }
+        }//execution
 
         std::vector<int> CountOccurrencesWordCommand::prefixFunction(const std::string &s) {
             std::vector<int> pi(s.length(), 0);
@@ -59,8 +59,7 @@ namespace word_counter {
                 }
             }
             return pi;
-        }
-
+        }//prefixFunction
 
     }//namespace command_handler
 }//namespace word_counter
