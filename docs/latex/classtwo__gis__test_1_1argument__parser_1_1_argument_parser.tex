@@ -1,0 +1,125 @@
+\hypertarget{classtwo__gis__test_1_1argument__parser_1_1_argument_parser}{}\section{two\+\_\+gis\+\_\+test\+:\+:argument\+\_\+parser\+:\+:Argument\+Parser Class Reference}
+\label{classtwo__gis__test_1_1argument__parser_1_1_argument_parser}\index{two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser@{two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+
+
+{\ttfamily \#include $<$argument\+\_\+parser.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtwo__gis__test_1_1argument__parser_1_1_argument_parser_a60b6545a121f02ce271e98b40d7635fc}{Argument\+Parser} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classtwo__gis__test_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} -\/ default constructor, init general\+Description\+\_\+. \end{DoxyCompactList}\item 
+void \hyperlink{classtwo__gis__test_1_1argument__parser_1_1_argument_parser_a02248a1453c8dc2e947f173f9b5cfc9b}{start\+Parsing} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em start\+Parsing start command line arguments parser \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::signals2\+::signal$<$ void(std\+::string \&filename, std\+::string \&word)$>$ \hyperlink{classtwo__gis__test_1_1argument__parser_1_1_argument_parser_a9fdaea74b7ce00d7cc39c797745b9436}{count\+Occurrences\+Word}
+\begin{DoxyCompactList}\small\item\em count -\/ program switching signal to word count mode \end{DoxyCompactList}\item 
+boost\+::signals2\+::signal$<$ void(std\+::string \&filename)$>$ \hyperlink{classtwo__gis__test_1_1argument__parser_1_1_argument_parser_ac02b2454df0eb6f127cadb0ccfdad67c}{calculate\+Checksum}
+\begin{DoxyCompactList}\small\item\em checksum -\/ the program switching signal to the Checksum calculation mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file argument\+\_\+parser.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser@{two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser}!Argument\+Parser@{Argument\+Parser}}
+\index{Argument\+Parser@{Argument\+Parser}!two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser@{two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{Argument\+Parser()}{ArgumentParser()}}]{\setlength{\rightskip}{0pt plus 5cm}two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser\+::\+Argument\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtwo__gis__test_1_1argument__parser_1_1_argument_parser_a60b6545a121f02ce271e98b40d7635fc}{}\label{classtwo__gis__test_1_1argument__parser_1_1_argument_parser_a60b6545a121f02ce271e98b40d7635fc}
+
+
+\hyperlink{classtwo__gis__test_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} -\/ default constructor, init general\+Description\+\_\+. 
+
+
+
+Definition at line 9 of file argument\+\_\+parser.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser@{two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser}!start\+Parsing@{start\+Parsing}}
+\index{start\+Parsing@{start\+Parsing}!two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser@{two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{start\+Parsing(int argc, char $\ast$argv[])}{startParsing(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}void two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser\+::start\+Parsing (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtwo__gis__test_1_1argument__parser_1_1_argument_parser_a02248a1453c8dc2e947f173f9b5cfc9b}{}\label{classtwo__gis__test_1_1argument__parser_1_1_argument_parser_a02248a1453c8dc2e947f173f9b5cfc9b}
+
+
+start\+Parsing start command line arguments parser 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & count of arguments \\
+\hline
+{\em argv} & -\/ values of arguments \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file argument\+\_\+parser.\+cpp.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtwo__gis__test_1_1argument__parser_1_1_argument_parser_a02248a1453c8dc2e947f173f9b5cfc9b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser@{two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser}!calculate\+Checksum@{calculate\+Checksum}}
+\index{calculate\+Checksum@{calculate\+Checksum}!two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser@{two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{calculate\+Checksum}{calculateChecksum}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::signals2\+::signal$<$void(std\+::string \&filename)$>$ two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser\+::calculate\+Checksum}\hypertarget{classtwo__gis__test_1_1argument__parser_1_1_argument_parser_ac02b2454df0eb6f127cadb0ccfdad67c}{}\label{classtwo__gis__test_1_1argument__parser_1_1_argument_parser_ac02b2454df0eb6f127cadb0ccfdad67c}
+
+
+checksum -\/ the program switching signal to the Checksum calculation mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ input file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file argument\+\_\+parser.\+hpp.
+
+\index{two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser@{two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser}!count\+Occurrences\+Word@{count\+Occurrences\+Word}}
+\index{count\+Occurrences\+Word@{count\+Occurrences\+Word}!two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser@{two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{count\+Occurrences\+Word}{countOccurrencesWord}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::signals2\+::signal$<$void(std\+::string \&filename, std\+::string \&word)$>$ two\+\_\+gis\+\_\+test\+::argument\+\_\+parser\+::\+Argument\+Parser\+::count\+Occurrences\+Word}\hypertarget{classtwo__gis__test_1_1argument__parser_1_1_argument_parser_a9fdaea74b7ce00d7cc39c797745b9436}{}\label{classtwo__gis__test_1_1argument__parser_1_1_argument_parser_a9fdaea74b7ce00d7cc39c797745b9436}
+
+
+count -\/ program switching signal to word count mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ input file \\
+\hline
+{\em word} & -\/ search word \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file argument\+\_\+parser.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/boa/\+C\+Lion\+Projects/word\+\_\+counter/args\+\_\+parser/include/\hyperlink{argument__parser_8hpp}{argument\+\_\+parser.\+hpp}\item 
+/home/boa/\+C\+Lion\+Projects/word\+\_\+counter/args\+\_\+parser/src/\hyperlink{argument__parser_8cpp}{argument\+\_\+parser.\+cpp}\end{DoxyCompactItemize}

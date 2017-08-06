@@ -1,0 +1,272 @@
+\hypertarget{classtwo__gis__test_1_1command__handler_1_1_invoker}{}\section{two\+\_\+gis\+\_\+test\+:\+:command\+\_\+handler\+:\+:Invoker Class Reference}
+\label{classtwo__gis__test_1_1command__handler_1_1_invoker}\index{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}}
+
+
+{\ttfamily \#include $<$invoker.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker_a18951d9324c7b97c0f4652591cbafb97}{Invoker} ()=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker}{Invoker} -\/ constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker_ab6aec58f3120f3c5fe7d6cc75d5d2fa8}{$\sim$\+Invoker} ()=default
+\begin{DoxyCompactList}\small\item\em $\sim$\+Invoker -\/ destructor \end{DoxyCompactList}\item 
+\hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker_aa7ea20637e71826d4287050fc5d7ec49}{Invoker} (const \hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker}{Invoker} \&)=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker}{Invoker} -\/ copy contructor. \end{DoxyCompactList}\item 
+\hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker_aa6dc501d5aba59816c3167a04bc6ef18}{Invoker} (\hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker}{Invoker} \&\&)=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker}{Invoker} -\/ move constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker}{Invoker} \& \hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker_ab0f46886672dd682e4c3da7de24afb16}{operator=} (const \hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker}{Invoker} \&)=default
+\begin{DoxyCompactList}\small\item\em operator= -\/ copy assignment operator \end{DoxyCompactList}\item 
+\hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker}{Invoker} \& \hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker_a0e5ad5a769bf4ad41793ef577fbd36f7}{operator=} (\hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker}{Invoker} \&\&)=default
+\begin{DoxyCompactList}\small\item\em operator= move assignment operator \end{DoxyCompactList}\item 
+void \hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker_aa883eef9d0cdc7d9d2b299a656fc0dc0}{count\+Occurrences\+Word} (std\+::string \&filename, std\+::string \&search\+Word)
+\begin{DoxyCompactList}\small\item\em count\+Occurrences\+Word -\/ create \hyperlink{classtwo__gis__test_1_1command__handler_1_1_count_occurrences_word_command}{Count\+Occurrences\+Word\+Command} and send to \hyperlink{classtwo__gis__test_1_1command__handler_1_1_command_handler}{Command\+Handler} \end{DoxyCompactList}\item 
+void \hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker_ae8fcf1764c98033f7fe855f4924eab7f}{calculate\+Check\+Sum} (std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em calculate\+Check\+Sum -\/ create \hyperlink{classtwo__gis__test_1_1command__handler_1_1_checksum_command}{Checksum\+Command} and sent to \hyperlink{classtwo__gis__test_1_1command__handler_1_1_command_handler}{Command\+Handler} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::signals2\+::signal$<$ void(std\+::shared\+\_\+ptr$<$ \hyperlink{classtwo__gis__test_1_1command__handler_1_1_i_command}{I\+Command} $>$ command)$>$ \hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker_a93519fc81bdc3f6e1832c6e3c1b5ad3a}{start}
+\begin{DoxyCompactList}\small\item\em start -\/ boost signal for sending command to \hyperlink{classtwo__gis__test_1_1command__handler_1_1_command_handler}{Command\+Handler} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classtwo__gis__test_1_1command__handler_1_1_i_command}{I\+Command} $>$ \hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker_aaa8657d1d2b7724976ddbaca0817415d}{create\+Count\+Occurrences\+Word\+Command} (std\+::string \&filename, std\+::string \&search\+Word)
+\begin{DoxyCompactList}\small\item\em create\+Count\+Occurrences\+Word\+Command -\/ create new exemplar of \hyperlink{classtwo__gis__test_1_1command__handler_1_1_count_occurrences_word_command}{Count\+Occurrences\+Word\+Command} class \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classtwo__gis__test_1_1command__handler_1_1_i_command}{I\+Command} $>$ \hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker_a9ad77345397bfea08fe5319388fcd91a}{create\+Checksum\+Command} (std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em create\+Checksum\+Command -\/ create new exemplar of \hyperlink{classtwo__gis__test_1_1command__handler_1_1_checksum_command}{Checksum\+Command} class \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+on the input data received from the client, it generates commands and passes it on to execution 
+
+Definition at line 19 of file invoker.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}!Invoker@{Invoker}}
+\index{Invoker@{Invoker}!two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{Invoker()=default}{Invoker()=default}}]{\setlength{\rightskip}{0pt plus 5cm}two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker\+::\+Invoker (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{classtwo__gis__test_1_1command__handler_1_1_invoker_a18951d9324c7b97c0f4652591cbafb97}{}\label{classtwo__gis__test_1_1command__handler_1_1_invoker_a18951d9324c7b97c0f4652591cbafb97}
+
+
+\hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker}{Invoker} -\/ constructor. 
+
+\index{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}!````~Invoker@{$\sim$\+Invoker}}
+\index{````~Invoker@{$\sim$\+Invoker}!two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{$\sim$\+Invoker()=default}{~Invoker()=default}}]{\setlength{\rightskip}{0pt plus 5cm}virtual two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker\+::$\sim$\+Invoker (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}\hypertarget{classtwo__gis__test_1_1command__handler_1_1_invoker_ab6aec58f3120f3c5fe7d6cc75d5d2fa8}{}\label{classtwo__gis__test_1_1command__handler_1_1_invoker_ab6aec58f3120f3c5fe7d6cc75d5d2fa8}
+
+
+$\sim$\+Invoker -\/ destructor 
+
+\index{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}!Invoker@{Invoker}}
+\index{Invoker@{Invoker}!two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{Invoker(const Invoker \&)=default}{Invoker(const Invoker &)=default}}]{\setlength{\rightskip}{0pt plus 5cm}two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker\+::\+Invoker (
+\begin{DoxyParamCaption}
+\item[{const {\bf Invoker} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{classtwo__gis__test_1_1command__handler_1_1_invoker_aa7ea20637e71826d4287050fc5d7ec49}{}\label{classtwo__gis__test_1_1command__handler_1_1_invoker_aa7ea20637e71826d4287050fc5d7ec49}
+
+
+\hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker}{Invoker} -\/ copy contructor. 
+
+\index{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}!Invoker@{Invoker}}
+\index{Invoker@{Invoker}!two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{Invoker(\+Invoker \&\&)=default}{Invoker(Invoker &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker\+::\+Invoker (
+\begin{DoxyParamCaption}
+\item[{{\bf Invoker} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{classtwo__gis__test_1_1command__handler_1_1_invoker_aa6dc501d5aba59816c3167a04bc6ef18}{}\label{classtwo__gis__test_1_1command__handler_1_1_invoker_aa6dc501d5aba59816c3167a04bc6ef18}
+
+
+\hyperlink{classtwo__gis__test_1_1command__handler_1_1_invoker}{Invoker} -\/ move constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}!calculate\+Check\+Sum@{calculate\+Check\+Sum}}
+\index{calculate\+Check\+Sum@{calculate\+Check\+Sum}!two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{calculate\+Check\+Sum(std\+::string \&filename)}{calculateCheckSum(std::string &filename)}}]{\setlength{\rightskip}{0pt plus 5cm}void two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker\+::calculate\+Check\+Sum (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classtwo__gis__test_1_1command__handler_1_1_invoker_ae8fcf1764c98033f7fe855f4924eab7f}{}\label{classtwo__gis__test_1_1command__handler_1_1_invoker_ae8fcf1764c98033f7fe855f4924eab7f}
+
+
+calculate\+Check\+Sum -\/ create \hyperlink{classtwo__gis__test_1_1command__handler_1_1_checksum_command}{Checksum\+Command} and sent to \hyperlink{classtwo__gis__test_1_1command__handler_1_1_command_handler}{Command\+Handler} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ input file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file invoker.\+cpp.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtwo__gis__test_1_1command__handler_1_1_invoker_ae8fcf1764c98033f7fe855f4924eab7f_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}!count\+Occurrences\+Word@{count\+Occurrences\+Word}}
+\index{count\+Occurrences\+Word@{count\+Occurrences\+Word}!two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{count\+Occurrences\+Word(std\+::string \&filename, std\+::string \&search\+Word)}{countOccurrencesWord(std::string &filename, std::string &searchWord)}}]{\setlength{\rightskip}{0pt plus 5cm}void two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker\+::count\+Occurrences\+Word (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{filename, }
+\item[{std\+::string \&}]{search\+Word}
+\end{DoxyParamCaption}
+)}\hypertarget{classtwo__gis__test_1_1command__handler_1_1_invoker_aa883eef9d0cdc7d9d2b299a656fc0dc0}{}\label{classtwo__gis__test_1_1command__handler_1_1_invoker_aa883eef9d0cdc7d9d2b299a656fc0dc0}
+
+
+count\+Occurrences\+Word -\/ create \hyperlink{classtwo__gis__test_1_1command__handler_1_1_count_occurrences_word_command}{Count\+Occurrences\+Word\+Command} and send to \hyperlink{classtwo__gis__test_1_1command__handler_1_1_command_handler}{Command\+Handler} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ input file \\
+\hline
+{\em search\+Word} & -\/ word, the number of occurrences of which will be calculated \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file invoker.\+cpp.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtwo__gis__test_1_1command__handler_1_1_invoker_aa883eef9d0cdc7d9d2b299a656fc0dc0_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}!create\+Checksum\+Command@{create\+Checksum\+Command}}
+\index{create\+Checksum\+Command@{create\+Checksum\+Command}!two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{create\+Checksum\+Command(std\+::string \&filename)}{createChecksumCommand(std::string &filename)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf I\+Command} $>$ two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker\+::create\+Checksum\+Command (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtwo__gis__test_1_1command__handler_1_1_invoker_a9ad77345397bfea08fe5319388fcd91a}{}\label{classtwo__gis__test_1_1command__handler_1_1_invoker_a9ad77345397bfea08fe5319388fcd91a}
+
+
+create\+Checksum\+Command -\/ create new exemplar of \hyperlink{classtwo__gis__test_1_1command__handler_1_1_checksum_command}{Checksum\+Command} class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ input file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new exemplar of \hyperlink{classtwo__gis__test_1_1command__handler_1_1_checksum_command}{Checksum\+Command} class 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file invoker.\+cpp.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtwo__gis__test_1_1command__handler_1_1_invoker_a9ad77345397bfea08fe5319388fcd91a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}!create\+Count\+Occurrences\+Word\+Command@{create\+Count\+Occurrences\+Word\+Command}}
+\index{create\+Count\+Occurrences\+Word\+Command@{create\+Count\+Occurrences\+Word\+Command}!two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{create\+Count\+Occurrences\+Word\+Command(std\+::string \&filename, std\+::string \&search\+Word)}{createCountOccurrencesWordCommand(std::string &filename, std::string &searchWord)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf I\+Command} $>$ two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker\+::create\+Count\+Occurrences\+Word\+Command (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{filename, }
+\item[{std\+::string \&}]{search\+Word}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtwo__gis__test_1_1command__handler_1_1_invoker_aaa8657d1d2b7724976ddbaca0817415d}{}\label{classtwo__gis__test_1_1command__handler_1_1_invoker_aaa8657d1d2b7724976ddbaca0817415d}
+
+
+create\+Count\+Occurrences\+Word\+Command -\/ create new exemplar of \hyperlink{classtwo__gis__test_1_1command__handler_1_1_count_occurrences_word_command}{Count\+Occurrences\+Word\+Command} class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ input file \\
+\hline
+{\em search\+Word} & -\/ Word, the number of occurrences of which will be calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ new exemplar of \hyperlink{classtwo__gis__test_1_1command__handler_1_1_count_occurrences_word_command}{Count\+Occurrences\+Word\+Command} class 
+\end{DoxyReturn}
+
+
+Definition at line 12 of file invoker.\+cpp.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtwo__gis__test_1_1command__handler_1_1_invoker_aaa8657d1d2b7724976ddbaca0817415d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}!operator=@{operator=}}
+\index{operator=@{operator=}!two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{operator=(const Invoker \&)=default}{operator=(const Invoker &)=default}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Invoker}\& two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Invoker} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{classtwo__gis__test_1_1command__handler_1_1_invoker_ab0f46886672dd682e4c3da7de24afb16}{}\label{classtwo__gis__test_1_1command__handler_1_1_invoker_ab0f46886672dd682e4c3da7de24afb16}
+
+
+operator= -\/ copy assignment operator 
+
+\index{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}!operator=@{operator=}}
+\index{operator=@{operator=}!two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{operator=(\+Invoker \&\&)=default}{operator=(Invoker &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Invoker}\& two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Invoker} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{classtwo__gis__test_1_1command__handler_1_1_invoker_a0e5ad5a769bf4ad41793ef577fbd36f7}{}\label{classtwo__gis__test_1_1command__handler_1_1_invoker_a0e5ad5a769bf4ad41793ef577fbd36f7}
+
+
+operator= move assignment operator 
+
+
+
+\subsection{Member Data Documentation}
+\index{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}!start@{start}}
+\index{start@{start}!two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker@{two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{start}{start}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::signals2\+::signal$<$void(std\+::shared\+\_\+ptr$<${\bf I\+Command}$>$ command)$>$ two\+\_\+gis\+\_\+test\+::command\+\_\+handler\+::\+Invoker\+::start}\hypertarget{classtwo__gis__test_1_1command__handler_1_1_invoker_a93519fc81bdc3f6e1832c6e3c1b5ad3a}{}\label{classtwo__gis__test_1_1command__handler_1_1_invoker_a93519fc81bdc3f6e1832c6e3c1b5ad3a}
+
+
+start -\/ boost signal for sending command to \hyperlink{classtwo__gis__test_1_1command__handler_1_1_command_handler}{Command\+Handler} 
+
+
+
+Definition at line 67 of file invoker.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/boa/\+C\+Lion\+Projects/word\+\_\+counter/command\+\_\+handler/include/\hyperlink{invoker_8hpp}{invoker.\+hpp}\item 
+/home/boa/\+C\+Lion\+Projects/word\+\_\+counter/command\+\_\+handler/src/\hyperlink{invoker_8cpp}{invoker.\+cpp}\end{DoxyCompactItemize}

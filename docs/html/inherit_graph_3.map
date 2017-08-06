@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtwo__gis__test_1_1command__handler_1_1_i_command.html" title="two_gis_test::command\l_handler::ICommand" alt="" coords="5,41,167,83"/>
+<area shape="rect" id="node2" href="$classtwo__gis__test_1_1command__handler_1_1_checksum_command.html" title="two_gis_test::command\l_handler::ChecksumCommand" alt="" coords="223,5,425,47"/>
+<area shape="rect" id="node3" href="$classtwo__gis__test_1_1command__handler_1_1_count_occurrences_word_command.html" title="two_gis_test::command\l_handler::CountOccurrencesWord\lCommand" alt="" coords="215,70,433,126"/>
+</map>

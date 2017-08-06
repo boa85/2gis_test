@@ -1,0 +1,11 @@
+<map id="/home/boa/CLionProjects/word_counter/command_handler/include/icommand.hpp" name="/home/boa/CLionProjects/word_counter/command_handler/include/icommand.hpp">
+<area shape="rect" id="node2" href="$checksum__command_8hpp.html" title="/home/boa/CLionProjects\l/word_counter/command\l_handler/include/checksum\l_command.hpp" alt="" coords="151,109,331,180"/>
+<area shape="rect" id="node5" href="$command__handler_8hpp.html" title="/home/boa/CLionProjects\l/word_counter/command\l_handler/include/command\l_handler.hpp" alt="" coords="815,109,992,180"/>
+<area shape="rect" id="node8" href="$count__occurrences__word__command_8hpp.html" title="/home/boa/CLionProjects\l/word_counter/command\l_handler/include/count\l_occurrences_word_command.hpp" alt="" coords="355,109,579,180"/>
+<area shape="rect" id="node10" href="$invoker_8hpp.html" title="/home/boa/CLionProjects\l/word_counter/command\l_handler/include/invoker.hpp" alt="" coords="603,117,790,173"/>
+<area shape="rect" id="node3" href="$checksum__command_8cpp.html" title="/home/boa/CLionProjects\l/word_counter/command\l_handler/src/checksum_command.cpp" alt="" coords="5,235,252,291"/>
+<area shape="rect" id="node4" href="$invoker_8cpp.html" title="/home/boa/CLionProjects\l/word_counter/command\l_handler/src/invoker.cpp" alt="" coords="507,235,676,291"/>
+<area shape="rect" id="node6" href="$command__handler_8cpp.html" title="/home/boa/CLionProjects\l/word_counter/command\l_handler/src/command_handler.cpp" alt="" coords="893,235,1121,291"/>
+<area shape="rect" id="node7" href="$main_8cpp.html" title="/home/boa/CLionProjects\l/word_counter/main.cpp" alt="" coords="700,243,869,284"/>
+<area shape="rect" id="node9" href="$count__occurrences__word__command_8cpp.html" title="/home/boa/CLionProjects\l/word_counter/command\l_handler/src/count_occurrences\l_word_command.cpp" alt="" coords="276,228,483,299"/>
+</map>
