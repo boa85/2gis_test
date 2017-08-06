@@ -21,7 +21,7 @@ namespace two_gis_test {
              * @brief ChecksumCommand - constructor
              * @param filename - input file
              */
-            explicit ChecksumCommand(std::string &filename);
+            explicit ChecksumCommand(const std::string &filename);
 
             /**
              * @brief ~ChecksumCommand - destructor
@@ -59,7 +59,10 @@ namespace two_gis_test {
              * @brief filename_ - input file
              */
             std::string filename_;
-
+            /**
+             * @brief checksum - calculate checksum
+             * @return 32-bit checksum
+             */
             uint32_t checksum();
         };//class ChecksumCommand
     }//namespace command_handler

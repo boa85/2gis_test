@@ -13,10 +13,10 @@ namespace two_gis_test {
 
     namespace command_handler {
         using namespace service;
-        CountOccurrencesWordCommand::CountOccurrencesWordCommand(std::string &filename,
-                                                                 std::string &searchWord)
-                : filename_(std::move(filename)),
-                  searchWord_(std::move(searchWord)) {}
+        CountOccurrencesWordCommand::CountOccurrencesWordCommand(const std::string &filename,
+                                                                 const std::string &searchWord)
+                : filename_(filename),
+                  searchWord_(searchWord) {}
 
         void CountOccurrencesWordCommand::execute() {
             boost::system::error_code errorCode;

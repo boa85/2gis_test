@@ -9,21 +9,21 @@
 namespace two_gis_test {
 
     namespace command_handler {
-        std::shared_ptr<ICommand> Invoker::createCountOccurrencesWordCommand(std::string &filename,
-                                                                             std::string &searchWord) {
+        std::shared_ptr<ICommand> Invoker::createCountOccurrencesWordCommand(const std::string &filename,
+                                                                             const std::string &searchWord) {
             return std::make_shared<CountOccurrencesWordCommand>(filename, searchWord);
         }
 
-        std::shared_ptr<ICommand> Invoker::createChecksumCommand(std::string &filename) {
+        std::shared_ptr<ICommand> Invoker::createChecksumCommand(const std::string &filename) {
             return std::make_shared<ChecksumCommand>(filename);
         }
 
-        void Invoker::countOccurrencesWord(std::string &filename, std::string &searchWord) {
+        void Invoker::countOccurrencesWord(const std::string &filename, const std::string &searchWord) {
             auto command = createCountOccurrencesWordCommand(filename, searchWord);
             start(command);
         }
 
-        void Invoker::calculateCheckSum(std::string &filename) {
+        void Invoker::calculateCheckSum(const std::string &filename) {
             auto command = createChecksumCommand(filename);
             start(command);
         }

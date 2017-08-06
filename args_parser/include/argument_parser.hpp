@@ -25,18 +25,19 @@ namespace two_gis_test {
              * @brief ArgumentParser - default constructor, init generalDescription_
              */
             ArgumentParser();
+
             /**
              * @brief count - program switching signal to word count mode
              * @param filename - input file
              * @param word - search word
              */
-            boost::signals2::signal<void(std::string &filename, std::string &word)> countOccurrencesWord;
+            boost::signals2::signal<void(const std::string &filename, const std::string &word)> countOccurrencesWord;
 
             /**
              * @brief checksum - the program switching signal to the Checksum calculation mode
              * @param filename - input file
              */
-            boost::signals2::signal<void(std::string &filename)> calculateChecksum;
+            boost::signals2::signal<void(const std::string &filename)> calculateChecksum;
 
         private:
             /**

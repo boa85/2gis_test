@@ -53,13 +53,13 @@ namespace two_gis_test {
              * @param filename - input file
              * @param searchWord - word, the number of occurrences of which will be calculated
              */
-            void countOccurrencesWord(std::string &filename, std::string &searchWord);
+            void countOccurrencesWord(const std::string &filename, const std::string &searchWord);
 
             /**
              * @brief calculateCheckSum - create ChecksumCommand and sent to CommandHandler
              * @param filename - input file
              */
-            void calculateCheckSum(std::string &filename);
+            void calculateCheckSum(const std::string &filename);
 
             /**
              * @brief start - boost signal for sending command to CommandHandler
@@ -73,14 +73,15 @@ namespace two_gis_test {
              * @param searchWord - Word, the number of occurrences of which will be calculated
              * @return - new exemplar of  CountOccurrencesWordCommand class
              */
-            std::shared_ptr<ICommand> createCountOccurrencesWordCommand(std::string &filename, std::string &searchWord);
+            std::shared_ptr<ICommand> createCountOccurrencesWordCommand(const std::string &filename,
+                                                                        const std::string &searchWord);
 
             /**
              * @brief createChecksumCommand - create new exemplar of  ChecksumCommand class
              * @param filename - input file
              * @return new exemplar of  ChecksumCommand class
              */
-            std::shared_ptr<ICommand> createChecksumCommand(std::string &filename);
+            std::shared_ptr<ICommand> createChecksumCommand(const std::string &filename);
 
         };//class Invoker
 

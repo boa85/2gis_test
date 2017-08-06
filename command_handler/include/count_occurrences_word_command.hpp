@@ -22,7 +22,7 @@ namespace two_gis_test {
              * @param filename - input file
              * @param searchWord - search word
              */
-            CountOccurrencesWordCommand(std::string &filename, std::string &searchWord);
+            CountOccurrencesWordCommand(const std::string &filename, const std::string &searchWord);
 
             /**
              * @brief ~CountOccurrencesWordCommand - destructor
@@ -48,10 +48,7 @@ namespace two_gis_test {
               * @brief operator= move assignment operator
               */
             CountOccurrencesWordCommand &operator=(CountOccurrencesWordCommand &&) = default;
-            /**
-             * @brief start - run command execution of the command
-             * @param command - command to be executed
-             */
+
 
             /**
              * @brief execute - override method ICommand interface,

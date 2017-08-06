@@ -13,8 +13,8 @@ namespace two_gis_test {
     namespace command_handler {
         using namespace service;
 
-        ChecksumCommand::ChecksumCommand(std::string &filename)
-                : filename_(std::move(filename)) {}
+        ChecksumCommand::ChecksumCommand(const std::string &filename)
+                : filename_(filename) {}
 
         void ChecksumCommand::execute() {
             boost::system::error_code errorCode;
