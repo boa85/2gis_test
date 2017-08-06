@@ -36,7 +36,7 @@ cd ${project_source_dir}
 mkdir cmake-build-debug && cd ./cmake-build-debug/
 * Запуск cmake для генерации Makefile
 cmake ..
-* Сборка проекта два, или я чёт не понимаю какого фига дважды?
+* Сборка проекта 
 make
 
 ###  Запуск
