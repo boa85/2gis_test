@@ -10,7 +10,7 @@
 
 #include "icommand.hpp"
 
-namespace word_counter {
+namespace two_gis_test {
     namespace command_handler {
         /**
          * @class CountOccurrencesWordCommand - implements ICommand interface
@@ -74,10 +74,12 @@ namespace word_counter {
              * computing prefix functions
              */
             std::vector<int> prefixFunction(const std::string &s);
+
+            int countOccurrences();
         };// class CountOccurrencesWordCommand
 
     }//namespace command_handler
-}//namespace word_counter
+}//namespace two_gis_test
 
 
 #endif //WORD_COUNTER_WORD_COUNT_COMMAND_HPP

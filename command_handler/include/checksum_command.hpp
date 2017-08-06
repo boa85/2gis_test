@@ -9,7 +9,7 @@
 
 #include "icommand.hpp"
 
-namespace word_counter {
+namespace two_gis_test {
     namespace command_handler {
         /**
          * @class ChecksumCommand - implements ICommand interface
@@ -63,7 +63,7 @@ namespace word_counter {
             uint32_t checksum();
         };//class ChecksumCommand
     }//namespace command_handler
-}//namespace word_counter
+}//namespace two_gis_test
 
 
 #endif //WORD_COUNTER_CHECKSUM_COMMAND_HPP

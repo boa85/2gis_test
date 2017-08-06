@@ -11,7 +11,7 @@
 #include "../../service/include/service.hpp"
 
 
-namespace word_counter {
+namespace two_gis_test {
     using namespace service;
     namespace po=boost::program_options;
     namespace argument_parser {
@@ -92,5 +92,5 @@ namespace word_counter {
             void startParsing(int argc, char *argv[]);
         };
     }//namespace argument_parser
-}//namespace word_counter
+}//namespace two_gis_test
 #endif//WORD_COUNTER_ARGUMENT_PARSER_HPP

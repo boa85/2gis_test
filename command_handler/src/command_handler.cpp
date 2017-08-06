@@ -4,10 +4,10 @@
 
 #include "../include/command_handler.hpp"
 
-namespace word_counter {
+namespace two_gis_test {
     namespace command_handler {
         void CommandHandler::start(std::shared_ptr<ICommand> command) {
             command->execute();
         }
     }//namespace command_handler
-}//namespace word_counter
+}//namespace two_gis_test

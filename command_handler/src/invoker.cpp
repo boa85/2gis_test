@@ -6,7 +6,7 @@
 #include "../include/count_occurrences_word_command.hpp"
 #include "../include/checksum_command.hpp"
 
-namespace word_counter {
+namespace two_gis_test {
 
     namespace command_handler {
         std::shared_ptr<ICommand> Invoker::createCountOccurrencesWordCommand(std::string &filename,
@@ -29,4 +29,4 @@ namespace word_counter {
         }
 
     }//namespace command_handler
-}//namespace word_counter
+}//namespace two_gis_test

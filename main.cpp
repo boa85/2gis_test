@@ -16,7 +16,7 @@
  * печатает информацию о программе и описание параметров.
  *
  */
-using namespace word_counter;
+using namespace two_gis_test;
 using namespace argument_parser;
 using namespace command_handler;
 int main(int argc, char *argv[]) {

@@ -10,7 +10,7 @@
 
 #include "icommand.hpp"
 
-namespace word_counter {
+namespace two_gis_test {
     namespace command_handler {
         /**
          * @class Invoker - Based on the input data received from the client,
@@ -85,7 +85,7 @@ namespace word_counter {
         };//class Invoker
 
     }//namespace command_handler
-}//namespace word_counter
+}//namespace two_gis_test
 
 
 

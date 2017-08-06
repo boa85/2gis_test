@@ -5,7 +5,7 @@
 #ifndef WORD_COUNTER_ICOMMAND_HPP
 #define WORD_COUNTER_ICOMMAND_HPP
 
-namespace word_counter {
+namespace two_gis_test {
     namespace command_handler {
         /**
          * @class ICommand - pattern Command interface
@@ -51,7 +51,7 @@ namespace word_counter {
             virtual void execute() = 0;
         };//class ICommand
     }//namespace command_handler
-}//namespace word_counter
+}//namespace two_gis_test
 
 
 #endif //WORD_COUNTER_ICOMMAND_HPP

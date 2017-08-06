@@ -8,7 +8,7 @@
 #include <exception>
 #include <string>
 
-namespace word_counter {
+namespace two_gis_test {
     namespace argument_parser {
         /**
          * @class ArgsParseException - my exception

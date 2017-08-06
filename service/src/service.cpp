@@ -4,7 +4,7 @@
 
 #include "../include/service.hpp"
 
-namespace word_counter {
+namespace two_gis_test {
 
     namespace service {
 
@@ -14,4 +14,4 @@ namespace word_counter {
             return (fs::exists(filename, errorCode) && fs::is_regular(filename, errorCode));
         }
     }//namespace service
-}//namespace word_counter
+}//namespace two_gis_test

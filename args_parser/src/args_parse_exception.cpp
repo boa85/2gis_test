@@ -7,7 +7,7 @@
 
 #include "../include/args_parse_exception.hpp"
 
-namespace word_counter {
+namespace two_gis_test {
     namespace argument_parser {
         ArgsParseException::ArgsParseException(const std::string &message)
                 : std::logic_error(message) {}

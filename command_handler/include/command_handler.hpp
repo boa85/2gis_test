@@ -11,7 +11,7 @@
 
 #include "icommand.hpp"
 
-namespace word_counter {
+namespace two_gis_test {
 
     namespace command_handler {
         /**
@@ -59,7 +59,7 @@ namespace word_counter {
 
     }//namespace command_handler
 
-}//namespace word_counter
+}//namespace two_gis_test
 
 
 #endif //WORD_COUNTER_COMMAND_HANDLER_HPP

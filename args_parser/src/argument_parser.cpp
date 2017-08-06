@@ -4,7 +4,7 @@
 #include "../include/args_parse_exception.hpp"
 
 using namespace boost::system;
-namespace word_counter {
+namespace two_gis_test {
     namespace argument_parser {
         ArgumentParser::ArgumentParser()
                 : generalDescription_("program options") {
@@ -17,10 +17,10 @@ namespace word_counter {
                             "author: boa85\n"
                             "program options: \n "
                             "mode, filename, word\n"
-                            "e.g ./word_counter -f Test.tst -m words -w mother - "
+                            "e.g ./two_gis_test -f Test.tst -m words -w mother - "
                             "\n prints the number of the word \"mother\" in the Test.tst file"
                             "\n or \n "
-                            "./word_counter -f Test.tst -m checksum - prints a 32-bit checksum\n ")
+                            "./two_gis_test -f Test.tst -m checksum - prints a 32-bit checksum\n ")
                     ("mode,m", po::value<std::string>(&mode_)->required(),
                      "program mode: words, checksum");
             wordCountDescription_.add_options()
@@ -117,4 +117,4 @@ namespace word_counter {
         }
 
     }//namespace argument_parser
-}//namespace word_counter
+}//namespace two_gis_test

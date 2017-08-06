@@ -7,7 +7,8 @@
 #include <vector>
 #include <string>
 #include <boost/filesystem.hpp>
-namespace word_counter {
+
+namespace two_gis_test {
 
     namespace service {
         /**
@@ -18,5 +19,5 @@ namespace word_counter {
          */
         bool isValidFile(const std::string &filename, boost::system::error_code &errorCode);
     }//namespace service
-}//namespace word_counter
+}//namespace two_gis_test
 #endif//WORD_COUNTER_SERVICE_HPP
