@@ -6,7 +6,7 @@
 #define WORD_COUNTER_WORD_COUNT_COMMAND_HPP
 
 #include <string>
-
+#include <vector>
 #include "icommand.hpp"
 
 namespace word_counter {
@@ -68,6 +68,13 @@ namespace word_counter {
              */
             std::string searchWord_;
 
+            /**
+             * @brief prefixFunction - Classical implementation of the Knuth-Morris-Pratt algorithm
+             * computing prefix functions
+             * @param s
+             * @return
+             */
+            std::vector<int> prefixFunction(const std::string &s);
         };// class CountOccurrencesWordCommand
 
     }//namespace command_handler
