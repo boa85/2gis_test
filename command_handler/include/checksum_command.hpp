@@ -2,8 +2,8 @@
 // Created by boa on 04.08.17.
 //
 
-#ifndef WORD_COUNTER_CHECKSUM_COMMAND_HPP
-#define WORD_COUNTER_CHECKSUM_COMMAND_HPP
+#ifndef TWO_GIS_TEST_CHECKSUM_COMMAND_HPP
+#define TWO_GIS_TEST_CHECKSUM_COMMAND_HPP
 
 #include <string>
 
@@ -66,4 +66,4 @@ namespace two_gis_test {
 }//namespace two_gis_test
 
 
-#endif //WORD_COUNTER_CHECKSUM_COMMAND_HPP
+#endif //TWO_GIS_TEST_CHECKSUM_COMMAND_HPP

@@ -2,8 +2,8 @@
 // Created by boa on 02.08.17.
 //
 
-#ifndef WORD_COUNTER_COMMAND_HANDLER_HPP
-#define WORD_COUNTER_COMMAND_HANDLER_HPP
+#ifndef TWO_GIS_TEST_COMMAND_HANDLER_HPP
+#define TWO_GIS_TEST_COMMAND_HANDLER_HPP
 
 #include <string>
 #include <functional>
@@ -62,4 +62,4 @@ namespace two_gis_test {
 }//namespace two_gis_test
 
 
-#endif //WORD_COUNTER_COMMAND_HANDLER_HPP
+#endif //TWO_GIS_TEST_COMMAND_HANDLER_HPP

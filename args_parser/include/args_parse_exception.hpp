@@ -2,8 +2,8 @@
 // Created by boa on 04.08.17.
 //
 
-#ifndef WORD_COUNTER_ARGS_PARSE_EXCEPTION_HPP
-#define WORD_COUNTER_ARGS_PARSE_EXCEPTION_HPP
+#ifndef TWO_GIS_TEST_ARGS_PARSE_EXCEPTION_HPP
+#define TWO_GIS_TEST_ARGS_PARSE_EXCEPTION_HPP
 
 #include <exception>
 #include <string>
@@ -47,4 +47,4 @@ namespace two_gis_test {
 }
 
 
-#endif //WORD_COUNTER_ARGS_PARSE_EXCEPTION_HPP
+#endif //TWO_GIS_TEST_ARGS_PARSE_EXCEPTION_HPP

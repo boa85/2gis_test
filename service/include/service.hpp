@@ -1,8 +1,8 @@
 //
 
 
-#ifndef WORD_COUNTER_SERVICE_HPP
-#define WORD_COUNTER_SERVICE_HPP
+#ifndef TWO_GIS_TEST_SERVICE_HPP
+#define TWO_GIS_TEST_SERVICE_HPP
 
 #include <vector>
 #include <string>
@@ -20,4 +20,4 @@ namespace two_gis_test {
         bool isValidFile(const std::string &filename, boost::system::error_code &errorCode);
     }//namespace service
 }//namespace two_gis_test
-#endif//WORD_COUNTER_SERVICE_HPP
+#endif//TWO_GIS_TEST_SERVICE_HPP

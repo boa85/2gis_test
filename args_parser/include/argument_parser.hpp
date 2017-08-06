@@ -1,7 +1,7 @@
 //
 
-#ifndef WORD_COUNTER_ARGUMENT_PARSER_HPP
-#define WORD_COUNTER_ARGUMENT_PARSER_HPP
+#ifndef TWO_GIS_TEST_ARGUMENT_PARSER_HPP
+#define TWO_GIS_TEST_ARGUMENT_PARSER_HPP
 
 #include <boost/program_options.hpp>
 #include <boost/signals2.hpp>
@@ -93,4 +93,4 @@ namespace two_gis_test {
         };
     }//namespace argument_parser
 }//namespace two_gis_test
-#endif//WORD_COUNTER_ARGUMENT_PARSER_HPP
+#endif//TWO_GIS_TEST_ARGUMENT_PARSER_HPP

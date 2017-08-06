@@ -2,8 +2,8 @@
 // Created by boa on 05.08.17.
 //
 
-#ifndef WORD_COUNTER_INVOKER_HPP
-#define WORD_COUNTER_INVOKER_HPP
+#ifndef TWO_GIS_TEST_INVOKER_HPP
+#define TWO_GIS_TEST_INVOKER_HPP
 
 #include <memory>
 #include <boost/signals2.hpp>
@@ -89,4 +89,4 @@ namespace two_gis_test {
 
 
 
-#endif //WORD_COUNTER_INVOKER_HPP
+#endif //TWO_GIS_TEST_INVOKER_HPP

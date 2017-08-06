@@ -2,8 +2,8 @@
 // Created by boa on 04.08.17.
 //
 
-#ifndef WORD_COUNTER_ICOMMAND_HPP
-#define WORD_COUNTER_ICOMMAND_HPP
+#ifndef TWO_GIS_TEST_ICOMMAND_HPP
+#define TWO_GIS_TEST_ICOMMAND_HPP
 
 namespace two_gis_test {
     namespace command_handler {
@@ -54,4 +54,4 @@ namespace two_gis_test {
 }//namespace two_gis_test
 
 
-#endif //WORD_COUNTER_ICOMMAND_HPP
+#endif //TWO_GIS_TEST_ICOMMAND_HPP
