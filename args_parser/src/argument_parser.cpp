@@ -45,7 +45,7 @@ namespace two_gis_test {
                 std::cout << generalDescription_;//show help
                 return;
             }
-            if (mode_ == "word") {//check program mode
+            if (mode_ == "words") {//check program mode
                 generalDescription_.add(wordCountDescription_);//add WORD_COUNT mode options descriptions
                 po::store(po::parse_command_line(argc, argv, generalDescription_),
                           vm);//checks the correctness of the mode parameters
