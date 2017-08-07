@@ -44,7 +44,7 @@
       ./2gis_test --help
 * Посчитать количество вхождений слова в текст
 
-      ./2gis_test -m word -f test.tst -w mother
+      ./2gis_test -m words -f test.tst -w mother
 * Вычислить чексумму.
 
       ./2gis_test -m checksum -f test.tst
