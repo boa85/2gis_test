@@ -48,6 +48,7 @@ namespace two_gis_test {
                 word &= (~0U << (WORD_SIZE - additionalSizeInBytes * 8));
                 checksum += word;
             }
+            input.close();
             return checksum;
         }
     }//namespace command_handler
